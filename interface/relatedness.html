@@ -1,0 +1,1620 @@
+<html>
+    <head></head>
+
+    <body>
+        <div style="margin-top:50px;"></div>
+
+        <section class="container" id="Relatedness">
+            <!-- Instructions (collapsible) -->
+            <div class="row" id="gendom_simrel_experiment_container">
+                <div class="col-xs-12 col-md-12">
+                <div class="panel panel-primary" id="gdsr_exp_instructions_and_consent">
+                    <div class="panel-heading"><strong>Judge relatedness of two real-world people, places, or organizations</strong></div>
+                    <div class="panel-body" id="instructionBody">
+                        <p>In this survey you will evaluate the relatedness of 34 pairs of real-world people, places, or
+                        organizations, named in English.  For example, you might see a pair like this one:</p>
+
+                        <!-- insert -->
+                        <div id="demo_question_container">
+                            <div class="question_text">
+                                How <strong>related</strong> are these two entities?
+                            </div>
+
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="http://en.wikipedia.org/wiki/London">London</a></td>
+                                            <td><a target="_blank" href="http://en.wikipedia.org/wiki/Paris">Paris</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <p>For each pair you are shown, we ask you to assign a relatedness score for the two people, places, or
+                        organizations.  You give your answer on a sliding scale from <i>&quot;Unrelated&quot;</i> to <i>&quot;Highly Related&quot;</i>.</p>
+
+                        <p>To make sure you are paying attention, we have included some questions for which we know the right
+                        answer.  If you read the questions carefully, you will definitely get those right.</p>
+
+                        <p>The survey should take about 5 minutes and you will be paid $0.75 for participating.</p>
+
+                        <p>At the end of the survey, we will ask you some short questions about you and your language background.
+                        You will be paid no matter what answers you give to those questions, so please answer truthfully.</p>
+
+                        <div id="start_survey_container">
+                            <input type="button" class="btn btn-primary" value="Start Survey" id="start_experiment_btn" />
+                        </div>
+
+                        <p id="consent_text">
+                        By clicking on the button above you agree to participate in this study, which is conducted by researchers at
+                        The Ohio State University.  You may withdraw from this study at any time without penalty or loss of benefits,
+                        including loss or reduction of payment.  If you do withdraw from the study before the end, please contact
+                        the researchers for information on how to collect payment (fosler-lussier dot 1 at osu dot edu).  The data
+                        collected will be anonymous and confidential.  If you have any questions, you may contact the requester
+                        through Amazon's Mechanical Turk platform, or directly at fosler-lussier dot 1 at osu dot edu.  For questions
+                        about your rights as a participant in this study or to discuss other study-related concerns or complaints with
+                        someone who is not part of the research team, you may contact Ms. Sandra Meadows in the Ohio State University
+                        Office of Responsible Research Practices at 1-800-678-6251.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="gdsr_exp_questions">
+                    <div class="question_instructions panel panel-primary">
+                        <a class="panel-heading" href="javascript:void(0);" id="question_instructions_collapse_toggle">
+                            <strong>Relatedness task Instructions</strong>
+                            <span class="collapse-text">(Click to expand)</span>
+                        </a>
+                        <div class="panel-body" id="question_instructions_body">
+                            <strong>Judging relatedness of two real-world people, places, or organizations</strong>
+
+                            <p>Please use the sliding scale below to assign a relatedness score to these two entities (people,
+                            places, or organizations), from <i>&quot;Unrelated&quot;</i> to <i>&quot;Highly Related&quot;</i>.</p>
+
+                            <p>We are interested in your first reactions, so please try not to take more than a few seconds to to choose
+                            a relatedness score for this pair.</p>
+
+                            <p>If you would like more information about either entity, click on either of their names to be taken to their
+                            Wikipedia pages in a new browser tab/window.</p>
+
+                            <p>You can go back to previous questions at any time, but you must use the slider to assign a
+                            relatedness score before you can advance to the next question.</p>
+
+                            <p><i>Please use the &quot;Previous&quot; button to navigate to the previous question, <u>not</u> your browser's &quot;Back&quot; button (as this will make you leave the survey).</i></p>
+                        </div>
+                    </div>
+                    
+                    <div class="panel">
+                        <div class="question_text">
+                            How <strong>related</strong> are these two entities?
+                        </div>
+
+                                                <div class="question_wrapper" id="gdsr_exp_question_wrapper_1">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/vatican_museums">Vatican Museums</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/turkey">Turkey</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q1_score" class="relatedness_slider" onchange="enable_next_button(1);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_1" onclick="show_prev_question(1);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(1);" id="next_question_btn_1" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_2">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/Washington,_D.C.">Washington, D.C.</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/United_States">USA</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q2_score" class="relatedness_slider" onchange="enable_next_button(2);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_2" onclick="show_prev_question(2);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(2);" id="next_question_btn_2" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_3">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/algeria">Algeria</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/france">France</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q3_score" class="relatedness_slider" onchange="enable_next_button(3);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_3" onclick="show_prev_question(3);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(3);" id="next_question_btn_3" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_4">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/denmark">Denmark</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/europe">Europe</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q4_score" class="relatedness_slider" onchange="enable_next_button(4);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_4" onclick="show_prev_question(4);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(4);" id="next_question_btn_4" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_5">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/national_security_agency">National Security Agency</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/german_army">German Army</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q5_score" class="relatedness_slider" onchange="enable_next_button(5);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_5" onclick="show_prev_question(5);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(5);" id="next_question_btn_5" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_6">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/mount_vesuvius">Mount vesuvius</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/shanghai">Shanghai</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q6_score" class="relatedness_slider" onchange="enable_next_button(6);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_6" onclick="show_prev_question(6);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(6);" id="next_question_btn_6" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_7">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/brazil">Brazil</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/BRIC">BRIC</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q7_score" class="relatedness_slider" onchange="enable_next_button(7);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_7" onclick="show_prev_question(7);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(7);" id="next_question_btn_7" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_8">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/ural_mountains">Ural Mountains</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/volga_river">Volga River</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q8_score" class="relatedness_slider" onchange="enable_next_button(8);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_8" onclick="show_prev_question(8);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(8);" id="next_question_btn_8" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_9">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/united_states">United States</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/hezbollah">Hezbollah</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q9_score" class="relatedness_slider" onchange="enable_next_button(9);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_9" onclick="show_prev_question(9);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(9);" id="next_question_btn_9" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_10">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/London">London</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/England">England</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q10_score" class="relatedness_slider" onchange="enable_next_button(10);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_10" onclick="show_prev_question(10);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(10);" id="next_question_btn_10" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_11">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/fred_astaire">Fred Astaire</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/nepal">Nepal</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q11_score" class="relatedness_slider" onchange="enable_next_button(11);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_11" onclick="show_prev_question(11);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(11);" id="next_question_btn_11" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_12">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/ludwig_van_beethoven">Ludwig van Beethoven</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/italy">Italy</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q12_score" class="relatedness_slider" onchange="enable_next_button(12);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_12" onclick="show_prev_question(12);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(12);" id="next_question_btn_12" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_13">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/guatemala">Guatemala</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/dominican_republic">Dominican Republic</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q13_score" class="relatedness_slider" onchange="enable_next_button(13);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_13" onclick="show_prev_question(13);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(13);" id="next_question_btn_13" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_14">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/mcdonald's">McDonald's</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/dow_chemical_company">Dow Chemical Company</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q14_score" class="relatedness_slider" onchange="enable_next_button(14);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_14" onclick="show_prev_question(14);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(14);" id="next_question_btn_14" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_15">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/Pope_Francis">Pope Francis</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/Antarctica">Antarctica</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q15_score" class="relatedness_slider" onchange="enable_next_button(15);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_15" onclick="show_prev_question(15);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(15);" id="next_question_btn_15" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_16">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/burkina_faso">Burkina Faso</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/americorps">AmeriCorps</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q16_score" class="relatedness_slider" onchange="enable_next_button(16);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_16" onclick="show_prev_question(16);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(16);" id="next_question_btn_16" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_17">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/ferdinand_vii_of_spain">Ferdinand VII of Spain</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/spanish_armed_forces">Spanish Armed Forces</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q17_score" class="relatedness_slider" onchange="enable_next_button(17);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_17" onclick="show_prev_question(17);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(17);" id="next_question_btn_17" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_18">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/cary_grant">Cary Grant</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/new_york_city">New York City</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q18_score" class="relatedness_slider" onchange="enable_next_button(18);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_18" onclick="show_prev_question(18);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(18);" id="next_question_btn_18" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_19">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/national_collegiate_athletic_association">NCAA</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/united_states_olympic_committee">United States Olympic Committee</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q19_score" class="relatedness_slider" onchange="enable_next_button(19);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_19" onclick="show_prev_question(19);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(19);" id="next_question_btn_19" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_20">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/world_boxing_organization">World Boxing Organization</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/royal_australian_air_force">Royal Australian Air Force</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q20_score" class="relatedness_slider" onchange="enable_next_button(20);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_20" onclick="show_prev_question(20);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(20);" id="next_question_btn_20" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_21">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/claude_debussy">Claude Debussy</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/england">England</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q21_score" class="relatedness_slider" onchange="enable_next_button(21);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_21" onclick="show_prev_question(21);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(21);" id="next_question_btn_21" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_22">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/james_patterson">James Patterson</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/canada">Canada</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q22_score" class="relatedness_slider" onchange="enable_next_button(22);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_22" onclick="show_prev_question(22);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(22);" id="next_question_btn_22" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_23">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/colorado_river">Colorado River</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/royal_geographical_society">Royal Geographical Society</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q23_score" class="relatedness_slider" onchange="enable_next_button(23);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_23" onclick="show_prev_question(23);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(23);" id="next_question_btn_23" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_24">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/j._r._r._tolkien">J.R.R. Tolkien</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/london_school_of_economics">London School of Economics</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q24_score" class="relatedness_slider" onchange="enable_next_button(24);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_24" onclick="show_prev_question(24);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(24);" id="next_question_btn_24" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_25">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/russia">Russia</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/american_ballet_theatre">American Ballet Theatre</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q25_score" class="relatedness_slider" onchange="enable_next_button(25);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_25" onclick="show_prev_question(25);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(25);" id="next_question_btn_25" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_26">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/busta_rhymes">Busta Rhymes</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/conagra_foods">ConAgra Foods</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q26_score" class="relatedness_slider" onchange="enable_next_button(26);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_26" onclick="show_prev_question(26);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(26);" id="next_question_btn_26" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_27">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/south_korea">South Korea</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/university_of_cambridge">University of Cambridge</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q27_score" class="relatedness_slider" onchange="enable_next_button(27);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_27" onclick="show_prev_question(27);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(27);" id="next_question_btn_27" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_28">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/daniel_radcliffe">Daniel Radcliffe</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/matt_damon">Matt Damon</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q28_score" class="relatedness_slider" onchange="enable_next_button(28);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_28" onclick="show_prev_question(28);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(28);" id="next_question_btn_28" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_29">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/daniel_radcliffe">Daniel Radcliffe</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/newt_gingrich">Newt Gingrich</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q29_score" class="relatedness_slider" onchange="enable_next_button(29);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_29" onclick="show_prev_question(29);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(29);" id="next_question_btn_29" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_30">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/kevin_durant">Kevin Durant</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/charlize_theron">Charlize Theron</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q30_score" class="relatedness_slider" onchange="enable_next_button(30);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_30" onclick="show_prev_question(30);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(30);" id="next_question_btn_30" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_31">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/ayn_rand">Ayn Rand</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/joseph_stalin">Joseph Stalin</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q31_score" class="relatedness_slider" onchange="enable_next_button(31);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_31" onclick="show_prev_question(31);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(31);" id="next_question_btn_31" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_32">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/lionel_messi">Lionel Messi</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/albania">Albania</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q32_score" class="relatedness_slider" onchange="enable_next_button(32);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_32" onclick="show_prev_question(32);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(32);" id="next_question_btn_32" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_33">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/FC_Barcelona">FC Barcelona</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/Wyoming">Wyoming</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q33_score" class="relatedness_slider" onchange="enable_next_button(33);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_33" onclick="show_prev_question(33);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" onclick="show_next_question(33);" id="next_question_btn_33" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="question_wrapper" id="gdsr_exp_question_wrapper_34">
+                            <div class="pair_table">
+                                <table class="table table-responsive table-condensed">
+                                    <tbody>
+                                        <tr>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/united_airways">United Airways</a></td>
+                                            <td><a target="_blank" href="https://en.wikipedia.org/wiki/african_national_congress">African National Congress</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="slider_wrapper">
+                                <table>
+                                <tr>
+                                <td class="lbl_cell unrelated_lbl"><label>Unrelated</label></td>
+                                <td class="slider_cell"><input type="range" min="0" max="100" value="50" name="q34_score" class="relatedness_slider" onchange="enable_next_button(34);" /></td>
+                                <td class="lbl_cell related_lbl"><label>Highly Related</label></td>
+                                </tr>
+                                </table>
+                            </div>
+
+                            <div class="next_question_btn_wrapper">
+                                <table>
+                                <tr>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary prev_question_btn" value="Previous" id="prev_question_btn_34" onclick="show_prev_question(34);" />&nbsp;
+                                </td>
+                                <td class="btn_cell">
+                                <input type="button" class="btn btn-primary next_question_btn" value="Next" id="finish_experiment_btn" />&nbsp;
+                                </td>
+                                </tr>
+                                </table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div id="gdsr_exp_submit_wrapper" class="panel panel-primary">
+                    <div class="panel-heading"><strong>Demographics</strong></div>
+                    <div class="panel-body" id="demographicsBody">
+                        <div id="return_to_survey_container">
+                            <input type="button" class="btn btn-primary" value="Return to Survey" id="return_to_experiment_btn" />
+                        </div>
+
+                        <p id="demographics_text">
+                        Finally, please answer these (optional) questions about you and your language background.  You will be paid
+                        no matter what answers you give to these questions, so please answer truthfully.
+                        </p>
+
+                        <table id="demographics_table">
+                            <tr>
+                                <td class="label_cell">
+                                    <label>Your age?<label>
+                                </td>
+                                <td class="input_cell">
+                                    <select name="demographics_age" id="demographics_age">
+                                        <option value="Under 18">Under 18</option>
+                                        <option value="18-25" selected>18-25</option>
+                                        <option value="26-30">26-30</option>
+                                        <option value="31-35">31-35</option>
+                                        <option value="36-40">36-40</option>
+                                        <option value="40-45">40-45</option>
+                                        <option value="45-50">45-50</option>
+                                        <option value="51+">51+</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label_cell">
+                                    <label>Your native language? (i.e., the language(s) that was/were spoken at home when you were a child)</label>
+                                </td>
+                                <td class="input_cell">
+                                    <input type="text" name="demographics_native_language" id="demographics_native_language" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label_cell">
+                                    <label>If English is not your native language, how well would you rate your ability to read written English? (1=poorly, 5=very well)</label>
+                                </td>
+                                <td class="input_cell">
+                                    <input type="radio" name="demographics_written_english_proficiency" value="N/A">&nbsp;N/A</input>
+                                    <input type="radio" name="demographics_written_english_proficiency" value="1">&nbsp;1</input>
+                                    <input type="radio" name="demographics_written_english_proficiency" value="2">&nbsp;2</input>
+                                    <input type="radio" name="demographics_written_english_proficiency" value="3">&nbsp;3</input>
+                                    <input type="radio" name="demographics_written_english_proficiency" value="4">&nbsp;4</input>
+                                    <input type="radio" name="demographics_written_english_proficiency" value="5">&nbsp;5</input>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div id="thank_you_container">
+                            <strong>Thank you for participating!</strong>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+            
+        <!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries -->
+        <!-- External CSS references -->
+        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" />
+        <!-- Open internal style sheet -->
+        <style type="text/css">
+            .question_text {
+                font-size: 14px;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            .question_wrapper table td {
+                text-align:center;
+            }
+            #demo_question_container {
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            #demo_question_container table td {
+                text-align:center;
+            }
+            .slider_wrapper {
+                /*text-align:center;*/
+                width: 100%;
+            }
+            .slider_wrapper table {
+                width: 100%;
+            }
+            .lbl_cell {
+                min-width:50px;
+                width:20%;
+            }
+            .lbl_cell.unrelated_lbl {
+                text-align:right;
+                padding-right:15px;
+            }
+            .lbl_cell.related_lbl {
+                text-align:left;
+                padding-left:15px;
+            }
+            .slider_cell {
+                width:60%;
+            }
+            .next_question_btn_wrapper {
+                width:100%;
+                text-align:center;
+            }
+            .next_question_btn_wrapper table {
+                width:100%;
+                text-align:center;
+            }
+            .next_question_btn_wrapper table td {
+                text-align:center;
+            }
+            .next_question_btn_wrapper table td.btn_cell {
+                width:50%;
+            }
+            .next_question_btn {
+                min-width:100px;
+            }
+            .prev_question_btn {
+                min-width:100px;
+            }
+            #question_instructions_collapse_toggle {
+                color:#fff;
+                display:block;
+                text-decoration:none;
+            }
+          
+            #collapseTrigger{
+                color:#fff;
+                display: block;
+                text-decoration: none;
+            }
+            #submitButton{
+                white-space: normal;
+            }
+            #instructionBody table{
+                font-size: 14px;
+                margin-top: 10px;
+            }
+            #instructionBody table caption{
+                text-align: left;
+                padding: 0 0 5px 0;
+            }
+            #Inputs{
+                display: block;
+                margin-top: 10px;
+            }
+            .content{
+                margin-bottom: 15px;
+            }
+            #start_survey_container{
+                text-align:center;
+            }
+
+            #consent_text{
+                margin-top: 15px;
+                padding-right: 15px;
+                padding-left: 15px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            #return_to_survey_container {
+                width:100%;
+                text-align:center;
+                margin-bottom: 30px;
+            }
+            #return_to_experiment_btn {
+                min-width:200px;
+            }
+
+            #demographics_table {
+                margin-top: 30px;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+            #demographics_table .label_cell {
+                width:50%;
+            }
+            #demographics_table .input_cell {
+                width:50%;
+                padding-left: 20px;
+            }
+            #demographics_table .input_cell input[type=radio] {
+                margin-left: 5px;
+            }
+
+            #thank_you_container {
+                width:100%;
+                text-align:center;
+                font-size:18px;
+                margin-top:30px;
+                margin-bottom:30px;
+            }
+            #demographics_text {
+                font-size: 16px;
+            }
+
+            .pair_table td {
+                width: 50%;
+            }
+        </style>
+        <!-- Close internal style sheet -->
+        <!-- External JS references --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Open internal javascript -->
+        <script>
+            $(document).ready(function() {
+                var n_questions = 34;
+
+                var instructions_and_consent = $('#gdsr_exp_instructions_and_consent');
+                var questions = $('#gdsr_exp_questions');
+                var submit_page = $('#gdsr_exp_submit_wrapper');
+                var submit_button = $('#submitButton');
+
+                // Show instructions and consent, hide questions and form submission
+                questions.hide();
+                submit_page.hide();
+                submit_button.hide();
+
+                // Set up showing questions
+                $('#start_experiment_btn').click(function() {
+                    instructions_and_consent.hide();
+                    questions.show();
+                });
+                // Set up showing form submission page
+                $('#finish_experiment_btn').click(function() {
+                    questions.hide();
+                    submit_page.show();
+                    submit_button.show();
+                });
+                // Set up returning to survey (if desired)
+                $('#return_to_experiment_btn').click(function() {
+                    submit_button.hide();
+                    submit_page.hide();
+                    questions.show();
+                });
+
+                // Set up instructions expand/collapse for questions pages
+                var instruction_content = $('#question_instructions_body');
+                var instruction_toggle = $('#question_instructions_collapse_toggle');
+                //instruction_content.hide();
+                $('.collapse-text').text('(Click to collapse)');
+                instruction_toggle.click(function() {
+                    instruction_content.toggle();
+                    var isVisible = instruction_content.is(':visible');
+                    if (isVisible) {
+                        $('.collapse-text').text('(Click to collapse)');
+                    } else {
+                        $('.collapse-text').text('(Click to expand)');
+                    }
+                });
+
+                // Hide all but the first question
+                for (i = 2; i <= n_questions; i++) {
+                    $('#gdsr_exp_question_wrapper_' + i).hide();
+                }
+
+                // Initialize all "Next" buttons to disabled, and enable them only on successful scale select
+                for (i = 1; i < n_questions; i++) {
+                    var btn = $('#next_question_btn_' + i);
+                    btn.prop("disabled", true);
+                    btn.prop("title", "Please select a relatedness score");
+                }
+                $('#finish_experiment_btn').prop("disabled", true);
+                $('#finish_experiment_btn').prop("title", "Please select a relatedness score");
+
+                // Remove the first "Previous" button
+                $('#prev_question_btn_1').prop("disabled", true);
+                $('#prev_question_btn_1').hide();
+            });
+
+            function show_next_question(i) {
+                $('#gdsr_exp_question_wrapper_' + i).hide();
+                $('#gdsr_exp_question_wrapper_' + (i+1)).show();
+            }
+            function show_prev_question(i) {
+                if (i == 1) { return; }
+                $('#gdsr_exp_question_wrapper_' + i).hide()
+                $('#gdsr_exp_question_wrapper_' + (i-1)).show();
+            }
+
+            function enable_next_button(i) {
+                if (i < 34) {
+                    var btn = $('#next_question_btn_' + i);
+                } else {
+                    var btn = $('#finish_experiment_btn');
+                }
+                btn.prop("disabled", false);
+                btn.prop("title", '');
+            }
+        </script><!-- Close internal javascript -->
+
+    </body>
+</html>
